@@ -1,0 +1,180 @@
+/* Basic Reset and Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Beautiful, subtle gradient background */
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2ebf0 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* --- Header and Logo --- */
+
+.logo-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #e94e77; /* The original brand color */
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* --- Main Content and Title --- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e94e77;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+/* --- Internship Grid Layout --- */
+
+.internship-grid {
+    display: grid;
+    /* 2 columns on large screens, automatically adjust */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    padding-bottom: 50px;
+}
+
+.internship-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid transparent; /* Base for border color */
+}
+
+/* Stunning Hover Effect */
+.internship-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Specific Theme Colors (Using border-bottom for a sleek look) */
+.web-dev { border-bottom-color: #3498db; }
+.app-dev { border-bottom-color: #2ecc71; }
+.python-prog { border-bottom-color: #f1c40f; }
+.java-prog { border-bottom-color: #e74c3c; }
+
+
+.card-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* --- Details List Styling --- */
+
+.details-list {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1; 
+}
+
+.details-list li {
+    padding: 12px 0;
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #ecf0f1;
+}
+
+.details-list li:last-child {
+    border-bottom: none;
+}
+
+.details-list li i {
+    margin-right: 15px;
+    font-size: 1.1rem;
+    color: #e94e77; /* Icon color */
+    width: 25px;
+    text-align: center;
+}
+
+/* --- Button Styling --- */
+
+.view-details-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    text-align: center;
+    background-color: #e94e77;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(233, 78, 119, 0.4);
+    border: none;
+}
+
+.view-details-btn:hover {
+    background-color: #d13d65; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(233, 78, 119, 0.6);
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .logo-text {
+        font-size: 1.8rem;
+    }
+    .internship-card {
+        padding: 25px;
+    }
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
